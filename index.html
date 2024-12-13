@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
+        "use strict";
+        //d = 98;  --> (Handle bugs) using strict mode is very helpful to get errors while fetching output .
         var a = 34;
         //let a ="This is Rahcurl";
         console.log(a);
@@ -26,13 +28,31 @@
 
         document.addEventListener("click" ,function click()
     {
-        console.log("message was clicked");
-        alert("Move-on");
+        //console.log("message was clicked");
+        //alert("Move-on");
        // let conf = confirm("are you sure ?");
        // console.log(conf);
     }
     )
-    
+    let arr = [1,2,45,5];
+    console.log(this);  //  will show as an windows object ...if not used ,undefined object showns
+    // function mero(number)
+    //         {
+    //             console.log("The number is : " + this)
+    //         }
+    // mero();
+
+    // let mero =(number) =>{
+    //             console.log("The number is : " + this)
+    //         }
+    // mero();
+    let myobj = {
+        mynum : (numb)=>{
+            console.log("The number is : " + this);
+
+        }
+    }
+    myobj.mynum();
 
     </script>
 </head>
